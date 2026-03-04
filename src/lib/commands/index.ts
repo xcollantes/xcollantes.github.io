@@ -7,7 +7,7 @@ import { pwd } from "./pwd"
 import { clear } from "./clear"
 import { whoami } from "./whoami"
 import { history } from "./history"
-import { sudo, vim, exit, neofetch } from "./easter"
+import { sudo, vim, exit, docker, neofetch } from "./easter"
 
 export const commands: Record<string, CommandHandler> = {
   help,
@@ -21,5 +21,6 @@ export const commands: Record<string, CommandHandler> = {
   sudo,
   vim,
   exit,
+  docker,
   neofetch,
 }

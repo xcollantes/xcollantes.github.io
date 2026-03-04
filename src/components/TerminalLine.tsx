@@ -33,6 +33,14 @@ export function TerminalLine({ line }: TerminalLineProps) {
     )
   }
 
+  if (line.type === "info") {
+    return (
+      <div className={`${baseClass} text-terminal-dir`}>
+        {line.text}
+      </div>
+    )
+  }
+
   // Handle directory markers for ls output
   if (line.text.startsWith("\x1Bdir:")) {
     const dirName = line.text.slice(5)

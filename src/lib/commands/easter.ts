@@ -13,6 +13,25 @@ export const exit: CommandHandler = () => {
   return { output: makeOutput(["There is no escape. Try 'help' instead."]) }
 }
 
+export const docker: CommandHandler = () => {
+  const whale = [
+    "",
+    "                     ##         .            ",
+    "               ## ## ##        ==            ",
+    "            ## ## ## ## ##    ===             ",
+    "        /\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\\___/ ===         ",
+    "   ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~  ",
+    "        \\______ o           __/              ",
+    "          \\    \\         __/                 ",
+    "           \\____\\_______/                    ",
+    "",
+    "    docker: command not found.",
+    "    ...but here's a whale anyway. 🐳",
+    "",
+  ]
+  return { output: makeOutput(whale, "info") }
+}
+
 export const neofetch: CommandHandler = () => {
   return {
     output: makeOutput([

@@ -8,7 +8,7 @@ export interface FileNode {
 export interface OutputLine {
   id: string
   text: string
-  type: "input" | "output" | "error" | "system"
+  type: "input" | "output" | "error" | "system" | "info"
 }
 
 export interface TerminalState {
