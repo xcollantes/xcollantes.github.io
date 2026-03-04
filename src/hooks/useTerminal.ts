@@ -8,6 +8,10 @@ import { tabComplete } from "@/lib/completion"
 import { makeError, makeInputLine } from "@/lib/commands/utils"
 import { useCommandHistory } from "./useCommandHistory"
 
+const MAX_OUTPUT_LINES = 1000
+const MAX_HISTORY = 100
+const MAX_INPUT_LENGTH = 500
+
 const WELCOME_BANNER: OutputLine[] = [
   { id: "welcome-1", text: "", type: "system" },
   { id: "welcome-2", text: "  Welcome to Xavier's Terminal Portfolio", type: "system" },
@@ -44,13 +48,21 @@ function reducer(state: TerminalState, action: Action): TerminalState {
         buildPrompt(state.currentPath),
         action.command
       )
+      const newOutput = [...state.output, inputLine, ...action.result]
+      const trimmedOutput = newOutput.length > MAX_OUTPUT_LINES
+        ? newOutput.slice(-MAX_OUTPUT_LINES)
+        : newOutput
+      const newHistory = action.command.trim()
+        ? [...state.commandHistory, action.command.trim()]
+        : state.commandHistory
+      const trimmedHistory = newHistory.length > MAX_HISTORY
+        ? newHistory.slice(-MAX_HISTORY)
+        : newHistory
       return {
         ...state,
-        output: [...state.output, inputLine, ...action.result],
+        output: trimmedOutput,
         input: "",
-        commandHistory: action.command.trim()
-          ? [...state.commandHistory, action.command.trim()]
-          : state.commandHistory,
+        commandHistory: trimmedHistory,
         historyIndex: -1,
       }
     }
@@ -135,6 +147,7 @@ export function useTerminal() {
   )
 
   const setInput = useCallback((input: string) => {
+    if (input.length > MAX_INPUT_LENGTH) return
     dispatch({ type: "SET_INPUT", input })
   }, [])
 

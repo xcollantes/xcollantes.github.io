@@ -79,6 +79,7 @@ export function Terminal() {
         value={state.input}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
+        maxLength={500}
         className="absolute opacity-0 w-0 h-0"
         autoCapitalize="none"
         autoCorrect="off"
