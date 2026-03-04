@@ -198,6 +198,10 @@ export function useTerminal() {
         result: result.output,
       })
 
+      if (result.openUrl) {
+        window.open(result.openUrl, "_blank", "noopener,noreferrer")
+      }
+
       if (newPath !== state.currentPath) {
         dispatch({ type: "SET_PATH", path: newPath })
       }

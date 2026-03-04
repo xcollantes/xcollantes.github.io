@@ -9,6 +9,7 @@ export interface CommandContext {
 export interface CommandResult {
   output: OutputLine[]
   clear?: boolean
+  openUrl?: string
 }
 
 export type CommandHandler = (
