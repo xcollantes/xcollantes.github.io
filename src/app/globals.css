@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-terminal-bg: #0a0a0f;
+  --color-terminal-bg: #000000;
   --color-terminal-text: #d4d4d8;
   --color-terminal-prompt: #4ade80;
   --color-terminal-dir: #60a5fa;
@@ -21,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #0a0a0f;
+  background-color: #000000;
 }
 
 ::selection {
@@ -33,7 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
