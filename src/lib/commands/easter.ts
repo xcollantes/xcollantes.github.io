@@ -1,6 +1,28 @@
 import { CommandHandler } from "./types"
 import { makeOutput } from "./utils"
 
+export const easter: CommandHandler = () => {
+  return {
+    output: makeOutput([
+      "Easter egg commands:",
+      "",
+      "  sudo",
+      "  vim",
+      "  exit",
+      "  docker",
+      "  borg",
+      "  python",
+      "  df",
+      "  neofetch",
+      "  rickroll",
+      "  linkedin",
+      "  github",
+      "  blog",
+      "  website",
+    ]),
+  }
+}
+
 export const sudo: CommandHandler = () => {
   return { output: makeOutput(["Nice try. 😏"]) }
 }
@@ -85,6 +107,48 @@ export const python: CommandHandler = () => {
       "    >>> from __future__ import barry_as_FLUFL",
       "",
     ], "info"),
+  }
+}
+
+export const linkedin: CommandHandler = () => {
+  return {
+    output: makeOutput(["Opening LinkedIn profile..."]),
+    openUrl: "https://linkedin.com/in/xcollantes",
+  }
+}
+
+export const github: CommandHandler = () => {
+  return {
+    output: makeOutput(["Opening GitHub profile..."]),
+    openUrl: "https://github.com/xcollantes",
+  }
+}
+
+export const blog: CommandHandler = () => {
+  return {
+    output: makeOutput(["Opening Substack..."]),
+    openUrl: "https://xcollantes.substack.com",
+  }
+}
+
+export const website: CommandHandler = () => {
+  return {
+    output: makeOutput(["Opening portfolio site..."]),
+    openUrl: "https://xaviercollantes.dev",
+  }
+}
+
+export const rickroll: CommandHandler = () => {
+  return {
+    output: makeOutput([
+      "",
+      "    Never gonna give you up,",
+      "    Never gonna let you down...",
+      "",
+      "    🎵 You know the rules and so do I 🎵",
+      "",
+    ]),
+    openUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   }
 }
 
