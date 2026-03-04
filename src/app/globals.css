@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-terminal-bg: #1a1b26;
+  --color-terminal-text: #a9b1d6;
+  --color-terminal-prompt: #9ece6a;
+  --color-terminal-dir: #7aa2f7;
+  --color-terminal-error: #f7768e;
+  --color-terminal-system: #bb9af7;
+  --color-terminal-cursor: #c0caf5;
+
+  --animate-blink: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1a1b26;
+}
+
+::selection {
+  background-color: rgba(122, 162, 247, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1b26;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #414868;
+  border-radius: 4px;
+}
