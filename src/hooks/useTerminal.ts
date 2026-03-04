@@ -14,11 +14,69 @@ const MAX_INPUT_LENGTH = 500
 
 const WELCOME_BANNER: OutputLine[] = [
   { id: "welcome-1", text: "", type: "system" },
-  { id: "welcome-2", text: "  Welcome to Xavier's Terminal Portfolio", type: "system" },
-  { id: "welcome-3", text: "  ──────────────────────────────────────", type: "system" },
-  { id: "welcome-4", text: "  Type 'help' to see available commands.", type: "system" },
-  { id: "welcome-5", text: "  Try 'ls' to explore or 'cat about.txt' to learn more.", type: "system" },
-  { id: "welcome-6", text: "", type: "system" },
+  {
+    id: "welcome-2",
+    text: " __  __    ___     _____ _____ ____",
+    type: "system",
+  },
+  {
+    id: "welcome-3",
+    text: "\\ \\/ /   / \\ \\   / /_ _| ____|  _ \\",
+    type: "system",
+  },
+  {
+    id: "welcome-4",
+    text: " \\  /   / _ \\ \\ / / | ||  _| | |_) |",
+    type: "system",
+  },
+  {
+    id: "welcome-5",
+    text: " /  \\  / ___ \\ V /  | || |___|  _ <",
+    type: "system",
+  },
+  {
+    id: "welcome-6",
+    text: "/_/\\_\\/_/_  \\_\\_/ _|___|_____|_|_\\_\\_ _____ _____ ____",
+    type: "system",
+  },
+  {
+    id: "welcome-7",
+    text: " / ___/ _ \\| |   | |      / \\  | \\ | |_   _| ____/ ___|",
+    type: "system",
+  },
+  {
+    id: "welcome-8",
+    text: "| |  | | | | |   | |     / _ \\ |  \\| | | | |  _| \\___ \\",
+    type: "system",
+  },
+  {
+    id: "welcome-9",
+    text: "| |__| |_| | |___| |___ / ___ \\| |\\  | | | | |___ ___) |",
+    type: "system",
+  },
+  {
+    id: "welcome-10",
+    text: " \\____\\___/|_____|_____/_/   \\_\\_| \\_| |_| |_____|____/",
+    type: "system",
+  },
+  { id: "welcome-11", text: "", type: "system" },
+  {
+    id: "welcome-12",
+    text: "Terminal Portfolio",
+    type: "system",
+  },
+  { id: "welcome-13", text: "", type: "system" },
+  {
+    id: "welcome-14",
+    text: "Type 'help' to see available commands.",
+    type: "system",
+  },
+  {
+    id: "welcome-15",
+    text: "Try 'ls' to explore or 'cat about.txt' to learn more.",
+    type: "system",
+  },
+  { id: "welcome-16", text: "", type: "system" },
 ]
 
 const initialState: TerminalState = {
