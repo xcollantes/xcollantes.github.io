@@ -60,23 +60,24 @@ const WELCOME_BANNER: OutputLine[] = [
     type: "system",
   },
   { id: "welcome-11", text: "", type: "system" },
+  { id: "welcome-12", text: "", type: "system" },
   {
-    id: "welcome-12",
-    text: "Terminal Portfolio",
+    id: "welcome-13",
+    text: "Terminal Portfolio by Xavier Collantes",
     type: "system",
   },
-  { id: "welcome-13", text: "", type: "system" },
+  { id: "welcome-14", text: "", type: "system" },
   {
-    id: "welcome-14",
+    id: "welcome-15",
     text: "Type 'help' to see available commands.",
     type: "system",
   },
   {
-    id: "welcome-15",
+    id: "welcome-16",
     text: "Try 'ls' to explore or 'cat about.txt' to learn more.",
     type: "system",
   },
-  { id: "welcome-16", text: "", type: "system" },
+  { id: "welcome-17", text: "", type: "system" },
 ]
 
 const initialState: TerminalState = {

@@ -165,20 +165,6 @@ export const fileSystem: FileNode = {
           ],
         },
         {
-          name: "google-kg.txt",
-          type: "file",
-          content: [
-            "Google via Qualitest Group",
-            "Software Engineer - Search & Assistant, Knowledge Graph",
-            "",
-            "- Integrated systems in Python and Bash, freeing",
-            "  9 engineer hours/day debugging NLP ML tuning",
-            "- Led team of 5 engineers testing data validation",
-            "  on millions of entities, reducing ingestion",
-            "  process by avg 2.5 months",
-          ],
-        },
-        {
           name: "jpmorgan.txt",
           type: "file",
           content: [

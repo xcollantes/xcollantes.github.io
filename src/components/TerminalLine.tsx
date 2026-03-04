@@ -7,7 +7,7 @@ interface TerminalLineProps {
 }
 
 export function TerminalLine({ line }: TerminalLineProps) {
-  const baseClass = "whitespace-pre-wrap break-all font-mono text-sm leading-6"
+  const baseClass = "whitespace-pre-wrap break-all font-mono text-sm leading-tight"
 
   if (line.type === "input") {
     return (
