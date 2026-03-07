@@ -117,6 +117,13 @@ export const linkedin: CommandHandler = () => {
   }
 }
 
+export const rm: CommandHandler = () => {
+  return {
+    output: makeOutput(["Not good..."]),
+    openUrl: "https://www.youtube.com/watch?v=HtTUsOKjWyQ",
+  }
+}
+
 export const github: CommandHandler = () => {
   return {
     output: makeOutput(["Opening GitHub profile..."]),

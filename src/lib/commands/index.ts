@@ -8,7 +8,7 @@ import { clear } from "./clear"
 import { whoami } from "./whoami"
 import { history } from "./history"
 import {
-  easter, sudo, vim, exit, docker, borg, df, python,
+  easter, sudo, vim, exit, docker, borg, df, python, rm,
   linkedin, github, blog, website, rickroll, neofetch,
 } from "./easter"
 
@@ -26,6 +26,7 @@ export const commands: Record<string, CommandHandler> = {
   vim,
   exit,
   docker,
+  rm,
   borg,
   df,
   python,
